@@ -35,9 +35,9 @@
         </div>
 
         <div class="row">
-            <a href="/customers/{{$customer->id}}/edit" class="btn btn-success">Edit</a>
+            <a href="{{url('/customers/'.$customer->id.'/edit')}}" class="btn btn-success">Edit</a>
             &nbsp;&nbsp;&nbsp;
-            <form action="/customers/{{$customer->id}}" method="post">
+            <form action="{{url('/customers/'.$customer->id)}}" method="post">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>

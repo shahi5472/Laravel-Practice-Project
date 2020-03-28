@@ -26,8 +26,8 @@ Route::get('/customers/{customer}/edit', 'CustomersController@edit');
 Route::put('/customers/{customer}', 'CustomersController@update');
 Route::delete('/customers/{customer}', 'CustomersController@destroy');
 
-Route::get('/contact', 'ContactFormController@create');
-Route::post('/contact', 'ContactFormController@store');
+Route::get('/contact-us', 'ContactFormController@create')->name('contact.create');
+Route::post('/contact-us', 'ContactFormController@store')->name('contact.store');
 
 //Route::get('/', function () {
 //    return view('welcome');

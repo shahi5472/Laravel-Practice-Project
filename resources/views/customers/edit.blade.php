@@ -12,7 +12,7 @@
         <div class="row">
 
             <div class="col">
-                <form action="/customers/{{$customer->id}}" method="post">
+                <form action="{{url('/customers/'.$customer->id)}}" method="post">
                     @method('PUT')
                     @include('customers.form')
                     <br>

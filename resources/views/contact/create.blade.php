@@ -7,7 +7,7 @@
 @section('content')
     <h1 style="text-align: center">Contact Us</h1>
 
-    <form action="/contact" method="post">
+    <form action="{{ route('contact.create') }}" method="post">
         @csrf
         <div>
             <label for="name">Name</label>

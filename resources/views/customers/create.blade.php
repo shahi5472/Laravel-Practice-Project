@@ -8,12 +8,12 @@
     <div>
 
         <h1 style="text-align: center">Add New Customer</h1>
-        <p><a href="/customers">Customer List</a></p>
+        <p><a href="{{ url('/customers') }}">Customer List</a></p>
 
         <div class="row">
 
             <div class="col">
-                <form action="/customers/create" method="post">
+                <form action="{{url('/customers/create')}}" method="post">
                     @include('customers.form')
                     <br>
                     <button class="btn btn-primary" type="submit">Add Customer</button>

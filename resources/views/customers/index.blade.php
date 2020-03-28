@@ -8,7 +8,7 @@
     <div>
 
         <h1 style="text-align: center">Customer List</h1>
-        <p><a href="/customers/create">Add New Customer</a></p>
+        <p><a href="{{url('/customers/create')}}">Add New Customer</a></p>
 
         @foreach($customers as $customer)
             <div class="row">

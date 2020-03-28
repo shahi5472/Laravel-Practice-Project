@@ -46,17 +46,17 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/' ? 'active' : '' }}"
-                                   href="/">Home <span
+                                   href="{{url('/')}}">Home <span
                                         class="sr-only">(current)</span></a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/companies' ? 'active' : '' }}"
-                                   href="/companies">Companies</a>
+                                   href="{{url('/companies')}}">Companies</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/customers' ? 'active' : '' }}"
-                                   href="/customers">Customers</a>
+                                   href="{{url('/customers')}}">Customers</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/contact' ? 'active' : '' }}"
-                                   href="/contact">Contact
+                                   href="{{url('/contact-us')}}">Contact
                                     Us</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/about' ? 'active' : '' }}"
-                                   href="/about">About
+                                   href="{{url('/about')}}">About
                                     Us</a>
                             </div>
                         </div>
