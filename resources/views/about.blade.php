@@ -11,7 +11,8 @@
     <div class="row">
         <div class="col-md-4">
             <div class="review_body" style="">
-                <h5 class="section_title text-center" style="display: block !important;width: 100%;padding: 10px 0px;font-size: 40px;">
+                <h5 class="section_title text-center"
+                    style="display: block !important;width: 100%;padding: 10px 0px;font-size: 40px;">
                     UK Office</h5>
                 <h4>SPACES</h4>
                 <h4>156 Great Charles St</h4>
@@ -27,7 +28,8 @@
             <div class="review_body">
                 <div>
 
-                    <h5 class="section_title text-center" style="display: block !important;width: 100%;padding-bottom: 10px;/* padding: 10px 0px; */font-size: 40px;">
+                    <h5 class="section_title text-center"
+                        style="display: block !important;width: 100%;padding-bottom: 10px;/* padding: 10px 0px; */font-size: 40px;">
                         Bangladesh Office</h5>
                     <h4>Rahman Market</h4>
                     <h4>Court Road</h4>
@@ -41,7 +43,8 @@
 
         <div class="col-md-4">
             <div class="review_body">
-                <h5 class="section_title text-center" style="display: block !important;width: 100%;padding: 10px 0px; font-size: 40px;">
+                <h5 class="section_title text-center"
+                    style="display: block !important;width: 100%;padding: 10px 0px; font-size: 40px;">
                     Nigeria Office</h5>
                 <h4>Ext. E, Suite 58</h4>
                 <h4>3rd Floor, Efab Mall</h4>
