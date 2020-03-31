@@ -5,55 +5,73 @@
 @endsection
 
 @section('content')
-    <h1 style="text-align: center">About Us</h1>
+    <section id="our-office">
 
-    <br>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="review_body" style="">
-                <h5 class="section_title text-center"
-                    style="display: block !important;width: 100%;padding: 10px 0px;font-size: 40px;">
-                    UK Office</h5>
-                <h4>SPACES</h4>
-                <h4>156 Great Charles St</h4>
-                <h4>Queensway, Birmingham</h4>
-                <h4>B3 3HN</h4>
-                <h4><i class="fa fa-phone"></i> Whatsapp : +447903015422 </h4>
-                <h4><i class="fa fa-phone"></i> Tel : +44(0)3301330180 </h4>
-
+        <div id="main-div-offcie">
+            <div>
+                <h1 class="head-text">GET IN TOUCH!</h1>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="review_body">
-                <div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="office-location">Head Office</h2>
+                    <h2 class="office-name"><b>Birmingham</b></h2>
+                    <p>Spaces, 156 Great Charles St, Queensway, Birmingham B3 3HN<br>
+                        <strong>Email:</strong>&nbsp;<a href="mailto:admission@teamconsultancy.co.uk">admission@teamconsultancy.co.uk</a><br>
+                        <strong>Phone:</strong> <a href="tel:+4403301330180">+4403301330180</a><br>
+                        <strong>WhatsApp:</strong> <a target="_blank"
+                                                      href="https://api.whatsapp.com/send?phone=+447903015422">+447903015422</a>
+                    </p>
+                </div>
 
-                    <h5 class="section_title text-center"
-                        style="display: block !important;width: 100%;padding-bottom: 10px;/* padding: 10px 0px; */font-size: 40px;">
-                        Bangladesh Office</h5>
-                    <h4>Rahman Market</h4>
-                    <h4>Court Road</h4>
-                    <h4>College Gate</h4>
-                    <h4>Moulvibazar</h4>
-                    <h4>3200</h4>
-                    <h4><i class="fa fa-phone"></i> Tel : +880130148313</h4>
+                <div class="col-md-3">
+                    <h2 class="office-location">Bangladesh</h2>
+                    <h2 class="office-name"><b>Moulvibazar</b></h2>
+                    <p>Rahman Market, Court Road, College Gate, Moulvibazar-3200<br>
+                        <strong>Email:</strong>&nbsp;<a href="mailto:admission@teamconsultancy.co.uk">admission@teamconsultancy.co.uk</a><br>
+                        <strong>Phone:</strong> <a href="tel:+880130148313">+880130148313</a><br>
+                        <strong>WhatsApp:</strong> <a target="_blank"
+                                                      href="https://api.whatsapp.com/send?phone=+447903015422">+447903015422</a>
+                </div>
+
+                <div class="col-md-3">
+                    <h2 class="office-location">Bangladesh</h2>
+                    <h2 class="office-name"><b>Sylhet</b></h2>
+                    <p>Millennium Tower, Room 604, 6th floor (Lift 7), Sylhet-3100<br>
+                        <strong>Email:</strong>&nbsp;<a href="mailto:admission@teamconsultancy.co.uk">admission@teamconsultancy.co.uk</a><br>
+                        <strong>Phone:</strong> <a href="tel:+880130148313">+880130148313</a><br>
+                        <strong>WhatsApp:</strong> <a target="_blank"
+                                                      href="https://api.whatsapp.com/send?phone=+447903015422">+447903015422</a>
+                </div>
+
+                <div class="col-md-3">
+                    <h2 class="office-location">Nigeria</h2>
+                    <h2 class="office-name"><b>Abuja</b></h2>
+                    <p>Ext. E, Suite 58, 3rd Floor, Efab Mall, Area 11, Garki, Abuja, Nigeria.<br>
+                        <strong>Email:</strong>&nbsp;<a href="mailto:admission@teamconsultancy.co.uk">admission@teamconsultancy.co.uk</a><br>
+                        <strong>Phone:</strong> <a href="tel:+2348057157133">+2348057157133</a><br>
+                        <strong>WhatsApp:</strong> <a target="_blank"
+                                                      href="https://api.whatsapp.com/send?phone=+2348038048206">+2348038048206</a>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="review_body">
-                <h5 class="section_title text-center"
-                    style="display: block !important;width: 100%;padding: 10px 0px; font-size: 40px;">
-                    Nigeria Office</h5>
-                <h4>Ext. E, Suite 58</h4>
-                <h4>3rd Floor, Efab Mall</h4>
-                <h4>Area 11, Garki</h4>
-                <h4>Abuja, Nigeria.</h4>
-                <h4><i class="fa fa-phone"></i> Whatsapp : +2348038048206 </h4>
-                <h4><i class="fa fa-phone"></i> Tel : +2348057157133 </h4>
-            </div>
-        </div>
-    </div>
-
+    </section>
 @endsection
+
+<style>
+    .head-text {
+        color: red;
+    }
+
+    .office-name {
+        color: red;
+    }
+
+    .head-text {
+        text-align: center;
+        font-size: 45px;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+</style>

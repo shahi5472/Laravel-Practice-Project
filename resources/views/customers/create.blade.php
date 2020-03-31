@@ -13,7 +13,7 @@
         <div class="row">
 
             <div class="col">
-                <form action="{{url('/customers/create')}}" method="post">
+                <form action="{{url('/customers/create')}}" method="post" enctype="multipart/form-data">
                     @include('customers.form')
                     <br>
                     <button class="btn btn-primary" type="submit">Add Customer</button>

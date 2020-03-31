@@ -48,6 +48,8 @@
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/' ? 'active' : '' }}"
                                    href="{{url('/')}}">Home <span
                                         class="sr-only">(current)</span></a>
+                                <a class="nav-item nav-link text-light {{ Request::path() == '/user' ? 'active' : '' }}"
+                                   href="{{url('/user')}}">Users</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/companies' ? 'active' : '' }}"
                                    href="{{url('/companies')}}">Companies</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/customers' ? 'active' : '' }}"
