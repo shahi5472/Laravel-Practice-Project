@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -41,7 +41,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view($request);
     }
 
     /**
@@ -63,7 +63,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Edit');
     }
 
     /**
@@ -75,7 +75,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('Update');
     }
 
     /**
@@ -86,6 +86,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('Destroy');
     }
 }
