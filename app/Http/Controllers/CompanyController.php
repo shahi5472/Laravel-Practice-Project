@@ -11,6 +11,7 @@ class CompanyController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +19,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
+        $companies = Company::paginate(10);
         return view('companies', compact('companies'));
     }
 
