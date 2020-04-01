@@ -24,7 +24,7 @@
             <option value="" selected disabled>Select Customer status</option>
             @foreach($customer->statusOptions() as $statusOptionsKey => $statusOptionsValue)
                 <option
-{{--                    {{ $customer->status == $statusOptionsValue ? 'selected'  : ''}}--}}
+                    {{--                    {{ $customer->status == $statusOptionsValue ? 'selected'  : ''}}--}}
                     value="{{$statusOptionsKey}}">{{$statusOptionsValue}}</option>
             @endforeach
         </select>
@@ -41,5 +41,11 @@
             @endforeach
         </select>
         <div style="color: red">{{$errors->first('company_id')}}</div>
+    </div>
+    <br>
+    <div>
+        <label for="image">Picture</label>
+        <input type="file" name="image" class="form-control">
+        <div style="color: red">{{$errors->first('image')}}</div>
     </div>
 </div>

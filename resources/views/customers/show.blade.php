@@ -34,6 +34,15 @@
             <br>
         </div>
 
+        @if($customer->image)
+            <div class="row">
+                <div class="col-12">
+                    <img width="200" height="200" src="{{asset('images/'.$customer->image)}}" alt="" srcset="" class="img-thumbnail">
+                </div>
+            </div>
+            <br>
+        @endif
+
         <div class="row">
             <a href="{{url('/customers/'.$customer->id.'/edit')}}" class="btn btn-success">Edit</a>
             &nbsp;&nbsp;&nbsp;

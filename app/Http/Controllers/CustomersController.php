@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use App\Customer;
-use App\Mail\WelcomeNewUserMail;
+use App\Events\NewCustomerRegisterEvent;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class CustomersController extends Controller
 {
@@ -22,7 +21,8 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        $customers = Customer::all();
+//        $customers = Customer::all();
+        $customers = Customer::with('company')->get();
         return view('customers.index', compact('customers'));
     }
 
@@ -47,6 +47,14 @@ class CustomersController extends Controller
     public function store(Request $request)
     {
         $customer = Customer::create($this->validateRequest($request));
+
+        if ($request->hasFile('image')) {
+            $imageName = $imageName = "IMG_" . rand(10000000000, 9999999999999) . '.' . $request->image->extension();
+
+            $request->image->move(public_path('images'), $imageName);
+            // save new image $file_name to database
+            $customer->update(['image' => $imageName]);
+        }
 
         event(new NewCustomerRegisterEvent($customer));
 
@@ -86,6 +94,15 @@ class CustomersController extends Controller
     public function update(Request $request, $id)
     {
         Customer::where('id', $id)->update($this->validateRequest($request));
+
+        if ($request->has('image')) {
+            $imageName = "IMG_" . rand(10000000000, 9999999999999) . '.' . $request->image->extension();
+
+            $request->image->move(public_path('images'), $imageName);
+            // save new image $file_name to database
+            Customer::where('id', $id)->update(['image' => $imageName]);
+        }
+
         return redirect('/customers/' . $request->id);
     }
 
@@ -97,17 +114,35 @@ class CustomersController extends Controller
      */
     public function destroy($id)
     {
+        $img = Customer::where('id', $id)->first();
+        $imagePath = $img->image;
+        unlink(public_path('images/' . $imagePath));//for image delete from folder
+
         Customer::where('id', $id)->delete();
         return redirect('/customers');
     }
 
     private function validateRequest(Request $request)
     {
-        return $data = $request->validate([
+        return $request->validate([
             'name' => 'required|min:3',
             'email' => 'required|email',
             'status' => 'required',
             'company_id' => 'required',
+            'image' => 'sometimes|file|image|mimes:jpeg,png,jpg,gif,svg|max:5000'
         ]);
+
+//        return tap($request->validate([
+//            'name' => 'required|min:3',
+//            'email' => 'required|email',
+//            'status' => 'required',
+//            'company_id' => 'required',
+//        ]), function () use ($request) {
+//            if ($request->hasFile('image')) {
+//                $request->validate([
+//                    'image' => 'file|image|mimes:jpeg,png,jpg,gif,svg|max:5000'
+//                ]);
+//            }
+//        });
     }
 }
