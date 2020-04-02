@@ -22,7 +22,7 @@ class CustomersController extends Controller
     public function index()
     {
 //        $customers = Customer::all();
-        $customers = Customer::with('company')->get();
+        $customers = Customer::with('company')->paginate(10);
         return view('customers.index', compact('customers'));
     }
 
@@ -46,6 +46,8 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Customer::class);
+
         $customer = Customer::create($this->validateRequest($request));
 
         if ($request->hasFile('image')) {
@@ -114,6 +116,8 @@ class CustomersController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('delete', Customer::where('id', $id)->first());
+
         $img = Customer::where('id', $id)->first();
         $imagePath = $img->image;
         unlink(public_path('images/' . $imagePath));//for image delete from folder

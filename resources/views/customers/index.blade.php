@@ -8,7 +8,9 @@
     <div>
 
         <h1 style="text-align: center">Customer List</h1>
-        <p><a href="{{url('/customers/create')}}">Add New Customer</a></p>
+        @can('create', \App\Customer::class)
+            <p><a href="{{url('/customers/create')}}">Add New Customer</a></p>
+        @endcan
 
         @foreach($customers as $customer)
             <div class="row">
@@ -26,6 +28,12 @@
                 </div>
             </div>
         @endforeach
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center pt-5">
+                {{ $customers->links() }}
+            </div>
+        </div>
 
     </div>
 @endsection
