@@ -7,7 +7,7 @@
 @section('content')
     <div>
 
-        <h1 style="text-align: center">Company</h1>
+        <h1 style="text-align: center">Company {{$number}}</h1>
 
         <br>
         <div class="row">

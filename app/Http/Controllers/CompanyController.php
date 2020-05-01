@@ -20,7 +20,8 @@ class CompanyController extends Controller
     public function index()
     {
         $companies = Company::paginate(10);
-        return view('companies', compact('companies'));
+        $number = Company::all()->count();
+        return view('companies', compact('companies', 'number'));
     }
 
     /**

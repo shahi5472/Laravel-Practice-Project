@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Customer extends Model
 {
@@ -11,6 +12,11 @@ class Customer extends Model
 //    protected $attributes = [
 //        'active' => 1,
 //    ];
+
+    public function path()
+    {
+        return url("/customers/{$this->id}/" . Str::slug($this->name));
+    }
 
     public function getStatusAttribute($attribute)
     {

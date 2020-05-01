@@ -18,7 +18,8 @@
                     {{ $customer->id }}
                 </div>
                 <div class="col-4">
-                    <a href="/customers/{{$customer->id }}">{{ $customer->name }}</a>
+                    {{--                    <a href="/customers/{{$customer->id }}">{{ $customer->name }}</a>--}}
+                    <a href="{{$customer->path() }}">{{ $customer->name }}</a>
                 </div>
                 <div class="col-4">
                     {{ $customer->company->name }}
