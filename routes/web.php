@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\WelcomeNewUserMail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/send-email', 'ExcelImport@sendEmail');
+//Route::get('/send-email', function () {
+//    return new WelcomeNewUserMail("SHAHi");
+//});
+
+Route::get('/excel', 'ExcelImport@index');
+Route::post('/excel', 'ExcelImport@store');
+Route::get('/excel/create', 'ExcelImport@create');
 
 //Route::view('/', 'layout');
 Route::view('/about', 'about');

@@ -52,6 +52,8 @@
                                    href="{{url('/user')}}">Users</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/companies' ? 'active' : '' }}"
                                    href="{{url('/companies')}}">Companies</a>
+                                <a class="nav-item nav-link text-light {{ Request::path() == '/excel' ? 'active' : '' }}"
+                                   href="{{url('/excel')}}">Excel</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/customers' ? 'active' : '' }}"
                                    href="{{url('/customers')}}">Customers</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/tags' ? 'active' : '' }}"

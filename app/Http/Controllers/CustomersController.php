@@ -46,7 +46,7 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('create', Customer::class);
+        //$this->authorize('create', Customer::class);
 
         $customer = Customer::create($this->validateRequest($request));
 
