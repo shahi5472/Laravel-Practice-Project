@@ -20,8 +20,8 @@ class ExcelImport extends Controller
 
     public function index()
     {
-        $transactions = Transaction::paginate(20);
-        $number = Transaction::all()->count();
+        $transactions = Transaction::whereNotNull('card_no')->paginate(20);
+        $number = Transaction::whereNotNull('card_no')->count();
         return view('excel.index', compact('transactions', 'number'));
     }
 
