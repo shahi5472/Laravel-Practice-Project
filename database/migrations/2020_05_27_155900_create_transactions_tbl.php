@@ -13,13 +13,9 @@ class CreateTransactionsTbl extends Migration
      */
     public function up()
     {
-        Schema::create('transactions_tbl', function (Blueprint $table) {
+        Schema::create('emails', function (Blueprint $table) {
             $table->id();
-            $table->string('name_on_card');
-            $table->string('card_no');
-            $table->string('exp_month');
-            $table->string('exp_year');
-            $table->string('cvv');
+            $table->string('email')->nullable();
             $table->timestamps();
         });
     }

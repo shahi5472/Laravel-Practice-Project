@@ -20,8 +20,12 @@ class ExcelImport extends Controller
 
     public function index()
     {
-        $transactions = Transaction::whereNotNull('card_no')->paginate(20);
-        $number = Transaction::whereNotNull('card_no')->count();
+//        $transactions = Transaction::whereNotNull('email')->paginate(20);
+//        $number = count(Transaction::whereNotNull('email')->get()->unique('email'));
+//        return view('excel.index', compact('transactions', 'number'));
+
+        $transactions = Transaction::whereNotNull('email')->paginate(20);
+        $number = count(Transaction::all());
         return view('excel.index', compact('transactions', 'number'));
     }
 
@@ -33,31 +37,37 @@ class ExcelImport extends Controller
     public function store(Request $request)
     {
         if ($request->hasFile('file')) {
-            $path = $request->file('file')->getRealPath();
-            //dd($path);
-            $data = Excel::import(new TransactionsImport, $request->file('file'));
-            //$data = Excel::import(new EmailMarket, $request->file('file'));
-            return $data;
+            Excel::import(new TransactionsImport, $request->file('file'));
+            return back();
         }
+        return back();
     }
 
     public function sendEmail()
     {
-        //$x = 0;
+//        $transactions = Transaction::whereNotNull('email')->get();
+//
+//        $array = $transactions;
+//        $data = array();
+//        foreach ($array as $value) {
+//            $data[$value->email] = $value->email;
+//        }
+//        return count(array_values($data));
+
+
+        //$transactions[] = ['email' => 'nuheljft@gmail.com', 'name' => "Caca"];
         $transactions[] = ['email' => 's.m.kamalhussain@gmail.com', 'name' => "Kamal Hussain"];
-        //$transactions[] = ['email' => 'azazul1988@gmail.com', 'name' => "Azazul Sunny"];
-        //$transactions[] = ['email' => 'shahirahman525@gmail.com', 'name' => "Shahi Rahman"];
-        //$transactions = Transaction::all();
-        //return $transactions;
+        $transactions[] = ['email' => 's.m.kamalhussain@hotmail.com', 'name' => "Kamal Hussain"];
+        $transactions[] = ['email' => 's.m.kamalhussainshahi@outlook.com', 'name' => "Kamal Hussain"];
+//        $transactions[] = ['email' => 'mustaksayed@hotmail.co.uk', 'name' => "Mustak Sayed"];
+        //$transactions[] = ['email' => 's.m.musharaf87@gmail.com', 'name' => "S.m. Sadi"];
+        // $transactions[] = ['email' => 'azazul1988@gmail.com', 'name' => "Azazul Sunny"];
+
+        //$transactions = Transaction::whereNotNull('email')->get();
         for ($i = 0; $i < count($transactions); $i++) {
-//            if (!is_null($transactions[$i]['card_no'])) {
-//                $x++;
-//                //print_r(count($transactions[$i]['card_no']));
-//            }
-            event(new NewCustomerRegisterEvent($transactions[$i]));
+        //echo $i . '   ' . $transactions[$i]['email'] . '<br>';
+        event(new NewCustomerRegisterEvent($transactions[$i]));
         }
-        //return $x;
         return back();
-        //event(new NewCustomerRegisterEvent($transactions));
     }
 }

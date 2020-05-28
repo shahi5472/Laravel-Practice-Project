@@ -20,8 +20,7 @@
                 <br>
                 @foreach($transactions as $transaction)
                     <ul>
-                        <li>{{$transaction->name_on_card}}</li>
-                        <li>{{$transaction->card_no}}</li>
+                        <li><b>{{strtolower($transaction->email)}}</b></li>
                     </ul>
                 @endforeach
             </div>

@@ -430,7 +430,6 @@
         }
 
         @media only screen and (max-width: 480px) {
-
             .mcnBoxedTextContentContainer .mcnTextContent, .mcnBoxedTextContentContainer .mcnTextContent p {
                 font-size: 14px !important;
                 line-height: 150% !important;
@@ -494,7 +493,7 @@
 
 
                                                                 <img align="center" alt=""
-                                                                     src="https://mcusercontent.com/553f9298d533743b04e6f5f9c/images/911da09f-13f8-44de-96a1-39b75306df27.png"
+                                                                     src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/logo-white-team.png"
                                                                      width="393"
                                                                      style="max-width:786px; padding-bottom: 0; display: inline !important; vertical-align: bottom;"
                                                                      class="mcnRetinaImage">
@@ -538,7 +537,7 @@
 
 
                                                                 <img align="center" alt=""
-                                                                     src="https://mcusercontent.com/553f9298d533743b04e6f5f9c/images/39c86cc2-39d0-427f-8f45-1d4caca0bc52.png"
+                                                                     src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/emoji@2x.png"
                                                                      width="600"
                                                                      style="max-width:1920px; padding-bottom: 0; display: inline !important; vertical-align: bottom;"
                                                                      class="mcnRetinaImage">
@@ -567,18 +566,39 @@
                                                                 style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
 
                                                                 <h1 data-testid="event-permalink-event-name"
-                                                                    id="seo_h1_tag"><span style="font-size:18px">Virtual Counselling with University of Chester</span>
+                                                                    id="seo_h1_tag"><span style="font-size:16px">Virtual Counselling with University of Chester</span>
                                                                 </h1>
 
-                                                                <p>To get started, replace the image above with a
-                                                                    striking product photo to catch people's
-                                                                    attention.</p>
+                                                                <p>Dear Recipient,
+                                                                    <br>
+                                                                    <br>
+                                                                    📣TEAM CONSULTANCY UK organising a Facebook Live
+                                                                    event
+                                                                    with University of Chester.
+                                                                    You are cordially invited to join our Live
+                                                                    session.</p>
 
-                                                                <p>Then, describe what makes your product unique,
-                                                                    useful, or gift-worthy. Be sure to highlight the
-                                                                    main features, and let people know where it's
-                                                                    available.</p>
+                                                                <p> 📌We will be discussing entry requirements,
+                                                                    scholarship
+                                                                    opportunities, effects of COVID-19 during academic
+                                                                    year
+                                                                    2020/2021, and many more issues regarding Study in
+                                                                    UK.</p>
 
+                                                                <p> 🩺University of Chester Medicine School offers a
+                                                                    range
+                                                                    of MSc programmes for Medical professionals. Also,
+                                                                    UoC
+                                                                    offers lots of other courses for different
+                                                                    backgrounds.
+                                                                    🙋Join the Live session find out more.
+                                                                    <br>
+                                                                    <br>
+                                                                    Thanks & Regards
+                                                                    <br>
+                                                                    Team Consultancy UK
+                                                                    <br>
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -703,7 +723,7 @@
                                                                                                                             class="mcnFollowIconContent">
                                                                                                                             <a href="https://www.facebook.com/TeamConsultancyUK"
                                                                                                                                target="_blank"><img
-                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-facebook-48.png"
+                                                                                                                                    src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/outline-light-facebook-48.png"
                                                                                                                                     alt="Facebook"
                                                                                                                                     style="display:block;"
                                                                                                                                     height="24"
@@ -757,7 +777,7 @@
                                                                                                                             class="mcnFollowIconContent">
                                                                                                                             <a href="https://twitter.com/TeamEducationUK"
                                                                                                                                target="_blank"><img
-                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-twitter-48.png"
+                                                                                                                                    src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/outline-light-twitter-48.png"
                                                                                                                                     alt="Twitter"
                                                                                                                                     style="display:block;"
                                                                                                                                     height="24"
@@ -812,7 +832,7 @@
                                                                                                                             class="mcnFollowIconContent">
                                                                                                                             <a href="https://www.instagram.com/teamconsultancyuk/"
                                                                                                                                target="_blank"><img
-                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-instagram-48.png"
+                                                                                                                                    src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/outline-light-instagram-48.png"
                                                                                                                                     alt="Link"
                                                                                                                                     style="display:block;"
                                                                                                                                     height="24"
@@ -867,7 +887,7 @@
                                                                                                                             class="mcnFollowIconContent">
                                                                                                                             <a href="https://teamconsultancy.co.uk/"
                                                                                                                                target="_blank"><img
-                                                                                                                                    src="https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light-link-48.png"
+                                                                                                                                    src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/outline-light-link-48.png"
                                                                                                                                     alt="Website"
                                                                                                                                     style="display:block;"
                                                                                                                                     height="24"

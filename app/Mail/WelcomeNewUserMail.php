@@ -11,16 +11,13 @@ class WelcomeNewUserMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $name;
-
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($name)
+    public function __construct()
     {
-        $this->name = $name;
     }
 
     /**
@@ -30,6 +27,8 @@ class WelcomeNewUserMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Virtual Counselling with University of Chester')->markdown('emails.new-welcome');
+        return $this->subject('Virtual Counselling with University of Chester')
+            ->replyTo('admission@teamconsultancy.co.uk')
+            ->markdown('emails.new-welcome');
     }
 }

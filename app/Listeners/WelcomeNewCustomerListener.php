@@ -17,6 +17,6 @@ class WelcomeNewCustomerListener
      */
     public function handle($event)
     {
-        Mail::to($event->customer['email'])->send(new WelcomeNewUserMail("SHAHi"));
+        Mail::to($event->customer['email'])->send(new WelcomeNewUserMail());
     }
 }

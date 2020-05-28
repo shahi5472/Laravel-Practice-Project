@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
-    protected $table = 'transactions_tbl';
+    protected $table = 'emails';
     protected $guarded = [];
 }
