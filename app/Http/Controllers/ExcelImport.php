@@ -20,13 +20,15 @@ class ExcelImport extends Controller
 
     public function index()
     {
-//        $transactions = Transaction::whereNotNull('email')->paginate(20);
-//        $number = count(Transaction::whereNotNull('email')->get()->unique('email'));
+        //$number = count(Transaction::whereNotNull('email')->get()->unique('email'));
 //        return view('excel.index', compact('transactions', 'number'));
 
-        $transactions = Transaction::whereNotNull('email')->paginate(20);
-        $number = count(Transaction::all());
-        return view('excel.index', compact('transactions', 'number'));
+        //650 original email
+        //716 in database
+
+         $transactions = Transaction::whereNotNull('email')->paginate(50);
+         $number = count(Transaction::whereNotNull('email')->get());
+         return view('excel.index', compact('transactions', 'number'));
     }
 
     public function create()
