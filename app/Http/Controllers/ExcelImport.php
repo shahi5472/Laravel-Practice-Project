@@ -58,16 +58,16 @@ class ExcelImport extends Controller
         //$transactions[] = ['email' => 'nuheljft@gmail.com', 'name' => "Caca"];
         $transactions[] = ['email' => 's.m.kamalhussain@gmail.com', 'name' => "Kamal Hussain"];
         $transactions[] = ['email' => 's.m.kamalhussain@hotmail.com', 'name' => "Kamal Hussain"];
-        $transactions[] = ['email' => 's.m.kamalhussainshahi@outlook.com', 'name' => "Kamal Hussain"];
+        //$transactions[] = ['email' => 's.m.kamalhussainshahi@outlook.com', 'name' => "Kamal Hussain"];
 //        $transactions[] = ['email' => 'mustaksayed@hotmail.co.uk', 'name' => "Mustak Sayed"];
         //$transactions[] = ['email' => 's.m.musharaf87@gmail.com', 'name' => "S.m. Sadi"];
         // $transactions[] = ['email' => 'azazul1988@gmail.com', 'name' => "Azazul Sunny"];
 
         //$transactions = Transaction::whereNotNull('email')->get();
         for ($i = 0; $i < count($transactions); $i++) {
-        //echo $i . '   ' . $transactions[$i]['email'] . '<br>';
-        event(new NewCustomerRegisterEvent($transactions[$i]));
+            //echo $i . '   ' . $transactions[$i]['email'] . '<br>';
+            event(new NewCustomerRegisterEvent($transactions[$i]));
         }
-        return back();
+        return redirect('/');
     }
 }
