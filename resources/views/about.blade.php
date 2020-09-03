@@ -59,7 +59,11 @@
     </section>
 
     <section>
+<<<<<<< HEAD
         <img id="corona" class="zoom alignnone wp-image-1993 aligncenter"
+=======
+        <img class="alignnone wp-image-1993 aligncenter"
+>>>>>>> e256422327d17a27efc7cc3d20ef8f94af8601ca
              src="https://teamconsultancy.co.uk/wp-content/uploads/2020/05/90500947_1346217302254710_7166083586834038784_o-300x158.png"
              alt="" width="100%" height="424"/>
         <div class="kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q">

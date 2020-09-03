@@ -174,6 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -226,7 +227,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Image' => Intervention\Image\Facades\Image::class,
+=======
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+>>>>>>> e256422327d17a27efc7cc3d20ef8f94af8601ca
     ],
 
 ];

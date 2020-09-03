@@ -18,7 +18,6 @@ class WelcomeNewUserMail extends Mailable
      */
     public function __construct()
     {
-        //
     }
 
     /**
@@ -28,6 +27,8 @@ class WelcomeNewUserMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.new-welcome');
+        return $this->subject('Virtual Counselling with University of Chester')
+            ->replyTo('admission@teamconsultancy.co.uk')
+            ->markdown('emails.new-welcome');
     }
 }

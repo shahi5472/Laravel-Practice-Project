@@ -24,12 +24,17 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+<<<<<<< HEAD
         $schedule->command('hour:update')->everyMinute();
         $schedule->command('inspire')->everyMinute();
 
         $schedule->command('hour:update')
             ->everyMinute()
             ->runInBackground();
+=======
+        // $schedule->command('inspire')->hourly();
+        $schedule->command('command:sendemail')->everyFiveMinutes();
+>>>>>>> e256422327d17a27efc7cc3d20ef8f94af8601ca
     }
 
     /**
