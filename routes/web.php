@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//For image
+Route::get('resizeImage', 'ImageController@resizeImage');
+Route::post('resizeImagePost', 'ImageController@resizeImagePost')->name('resizeImagePost');
 
 //Route::view('/', 'layout');
 Route::view('/about', 'about');

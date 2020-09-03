@@ -58,6 +58,8 @@
                                    href="{{url('/tags')}}">Tags</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/post' ? 'active' : '' }}"
                                    href="{{url('/post')}}">Post</a>
+                                <a class="nav-item nav-link text-light {{ Request::path() == '/resizeImage' ? 'active' : '' }}"
+                                   href="{{url('/resizeImage')}}">Resize Image</a>
                                 <a class="nav-item nav-link text-light {{ Request::path() == '/contact' ? 'active' : '' }}"
                                    href="{{url('/contact-us')}}">Contact
                                     Us</a>
@@ -186,6 +188,8 @@
 
     });
 </script>
+
+@yield('scripts')
 
 </body>
 </html>
